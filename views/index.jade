@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  ul
+    each mon in pokemon
+      li= mon.name
+
+  form(method="POST", action="/pokemon")
+    input(name="name")
+    input(name="pokedex_number")
+    input(name="type1")
+    input(name="type2")
+    input(type="submit")
